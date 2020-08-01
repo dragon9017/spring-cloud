@@ -30,14 +30,6 @@ public class OrderController {
     private RestTemplate restTemplate;
     @Value("${server.port}")
     private String port;
-    @PostMapping ("/system/update")
-//    public CommonResult UpdateData(@RequestBody Payment payment){
-////       resttemplate发送post请求
-//        log.info("80发送8001调用");
-//        CommonResult commonResult = restTemplate.postForObject("http://localhost:8081/payment/system/update", payment, CommonResult.class);
-//        return new CommonResult(200,"调用成功",commonResult);
-//    }
-
     @GetMapping("/system/about")
     public String Show_zookeeper(){
         log.info("当前端口"+port);
