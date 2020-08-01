@@ -30,13 +30,13 @@ public class OrderController {
     private RestTemplate restTemplate;
     @Value("${server.port}")
     private String port;
-//    @PostMapping ("/system/update")
-//    public CommonResult UpdateData(@RequestBody Payment payment){
-////       resttemplate发送post请求
-//        log.info("80发送8001调用");
-//        CommonResult commonResult = restTemplate.postForObject("http://localhost:8081/payment/system/update", payment, CommonResult.class);
-//        return new CommonResult(200,"调用成功",commonResult);
-//    }
+    @PostMapping ("/system/update")
+    public CommonResult UpdateData(@RequestBody Payment payment){
+//       resttemplate发送post请求
+        log.info("80发送8001调用");
+        CommonResult commonResult = restTemplate.postForObject("http://localhost:8081/payment/system/update", payment, CommonResult.class);
+        return new CommonResult(200,"调用成功",commonResult);
+    }
 
     @GetMapping("/system/about")
     public String Show_zookeeper(){
@@ -52,30 +52,30 @@ public class OrderController {
      * resttemplate
      */
 
-    @PostMapping ("/system/update")
-    public CommonResult UpdateData(@RequestBody Payment payment){
-//       resttemplate发送post请求
-        log.info("80发送8001调用");
-        ResponseEntity<CommonResult> commonResultResponseEntity = restTemplate.postForEntity("http://localhost:8081/payment/system/update", payment, CommonResult.class);
-//        获取请求返回状态
-        HttpStatus statusCode = commonResultResponseEntity.getStatusCode();
-//        判断请求状态的不同
-        if (statusCode.is2xxSuccessful()){
-            log.info("返回成功"+statusCode.getReasonPhrase());
-            return new CommonResult(200,"调用成功");
-        }
-        else if (statusCode.is4xxClientError()){
-            log.info("页面错误"+statusCode.getReasonPhrase());
-            return new CommonResult(400,"页面错误");
-        }
-        else if (statusCode.is5xxServerError()){
-            log.info("服务器错误"+statusCode.getReasonPhrase());
-            return new CommonResult(500,"服务器错误");
-        }
-        else{
-            return new CommonResult(100,"未知");
-        }
-    }
+//    @PostMapping ("/system/update")
+//    public CommonResult UpdateData(@RequestBody Payment payment){
+////       resttemplate发送post请求
+//        log.info("80发送8001调用");
+//        ResponseEntity<CommonResult> commonResultResponseEntity = restTemplate.postForEntity("http://localhost:8081/payment/system/update", payment, CommonResult.class);
+////        获取请求返回状态
+//        HttpStatus statusCode = commonResultResponseEntity.getStatusCode();
+////        判断请求状态的不同
+//        if (statusCode.is2xxSuccessful()){
+//            log.info("返回成功"+statusCode.getReasonPhrase());
+//            return new CommonResult(200,"调用成功");
+//        }
+//        else if (statusCode.is4xxClientError()){
+//            log.info("页面错误"+statusCode.getReasonPhrase());
+//            return new CommonResult(400,"页面错误");
+//        }
+//        else if (statusCode.is5xxServerError()){
+//            log.info("服务器错误"+statusCode.getReasonPhrase());
+//            return new CommonResult(500,"服务器错误");
+//        }
+//        else{
+//            return new CommonResult(100,"未知");
+//        }
+//    }
 
 
 }
