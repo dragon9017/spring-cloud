@@ -1,15 +1,13 @@
-package com.controller.paymentcontroller;
+package com.modal.controller.paymentcontroller;
 
 import com.api.commons.CommonResult;
 import com.api.entiry.payment.Payment;
-import com.service.paymentservice.PaymentService;
+import com.modal.service.paymentservice.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
-import sun.plugin.com.DispatchClient;
-import sun.rmi.runtime.Log;
 
 import javax.annotation.Resource;
 import java.util.List;

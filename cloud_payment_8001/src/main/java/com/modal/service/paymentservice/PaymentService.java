@@ -1,4 +1,4 @@
-package com.service.paymentservice;
+package com.modal.service.paymentservice;
 
 import com.api.entiry.payment.Payment;
 

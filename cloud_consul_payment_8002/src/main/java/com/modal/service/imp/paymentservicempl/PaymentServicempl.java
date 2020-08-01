@@ -1,8 +1,8 @@
-package com.service.imp.paymentservicempl;
+package com.modal.service.imp.paymentservicempl;
 
 import com.api.entiry.payment.Payment;
-import com.mapper.paymentmapper.PaymentMapper;
-import com.service.paymentservice.PaymentService;
+import com.modal.mapper.paymentmapper.PaymentMapper;
+import com.modal.service.paymentservice.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.mapper.paymentmapper;
+package com.modal.mapper.paymentmapper;
 
 import com.api.entiry.payment.Payment;
 import org.apache.ibatis.annotations.Mapper;

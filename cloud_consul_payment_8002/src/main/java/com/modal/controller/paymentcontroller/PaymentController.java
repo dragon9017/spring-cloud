@@ -1,8 +1,8 @@
-package com.controller.paymentcontroller;
+package com.modal.controller.paymentcontroller;
 
 import com.api.commons.CommonResult;
 import com.api.entiry.payment.Payment;
-import com.service.paymentservice.PaymentService;
+import com.modal.service.paymentservice.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -55,7 +55,7 @@ public class PaymentController {
     @GetMapping("/system/about/consul")
     public String GetZooker(){
         log.info("当前服务器的端口号"+port+"--------流水号"+UUID.randomUUID().toString());
-        return (UUID.randomUUID().toString());
+        return ("端口号"+port+UUID.randomUUID().toString());
     }
 
 }
